@@ -36,7 +36,7 @@ class OptionsControllerTest extends IntegrationTestCase
      */
     public function testIndex()
     {
-        $this->get('/CakeSuit/options');
+        $this->get('/cakesuit/options');
         $this->assertResponseOk();
 
         $options = $this->Options->find('autoload');
@@ -55,13 +55,13 @@ class OptionsControllerTest extends IntegrationTestCase
      */
     public function testView()
     {
-        $this->get('CakeSuit/options/view/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7');
+        $this->get('cakesuit/options/view/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7');
         $this->assertResponseOk();
     }
 
     public function testViewNotFound()
     {
-        $this->get('CakeSuit/options/view/1');
+        $this->get('cakesuit/options/view/1');
         $this->assertResponseError();
     }
 
@@ -72,11 +72,11 @@ class OptionsControllerTest extends IntegrationTestCase
      */
     public function testAdd()
     {
-        $this->get('CakeSuit/options/add');
+        $this->get('cakesuit/options/add');
         $this->assertResponseOk();
         $this->assertResponseContains('option');
 
-        $this->post('CakeSuit/options/add', [
+        $this->post('cakesuit/options/add', [
             'opt_key' => 'site__meta_description',
             'opt_value' => 'My new web site',
             'opt_autoload' => 1
@@ -91,23 +91,23 @@ class OptionsControllerTest extends IntegrationTestCase
      */
     public function testEdit()
     {
-        $this->get('CakeSuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7');
+        $this->get('cakesuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7');
         $this->assertResponseOk();
         $this->assertResponseContains('option');
 
-        $this->post('CakeSuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
+        $this->post('cakesuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
             'opt_value' => 'My new web site'
         ]);
 
         $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
 
-        $this->put('CakeSuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
+        $this->put('cakesuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
             'opt_autoload' => 1
         ]);
 
         $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
 
-        $this->post('CakeSuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
+        $this->post('cakesuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
             'opt_autoload' => 1
         ]);
 
@@ -121,7 +121,7 @@ class OptionsControllerTest extends IntegrationTestCase
      */
     public function testDelete()
     {
-        $this->delete('CakeSuit/options/delete/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7');
+        $this->delete('cakesuit/options/delete/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7');
         $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
     }
 }
