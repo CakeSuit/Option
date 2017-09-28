@@ -5,7 +5,7 @@ use Cake\Routing\Route\DashedRoute;
 
 Router::plugin(
     'CakeSuit/Option',
-    ['path' => '/CakeSuit'],
+    ['path' => '/cakesuit'],
     function (RouteBuilder $routes) {
         $routes->fallbacks(DashedRoute::class);
     }
