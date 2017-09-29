@@ -30,16 +30,6 @@ Now that the plugin is installed and loaded, you have to migrate the schema for 
 bin/cake migrations migrate -p CakeSuit/Option
 ```
 
-
-## Database
-Here is an example of what can be found in the table
-
-| key | value | autoload |
-|-----|:-----:|---------:|
-|site_name|My Blog|1|
-|site_description|Use CakeSuit/Option for advance settings|1|
-|analytics_ua|UA-XXXXXX|0|
-
 ## Default Routes
 ```php
 <?php
@@ -108,6 +98,43 @@ Router::plugin(
     }
 );
 ```
+
+## Database
+Here is an example of what can be found in the table
+
+| key | value | autoload |
+|-----|:-----:|---------:|
+|site_name|My Blog|1|
+|site_description|Use CakeSuit/Option for advance settings|1|
+|analytics_ua|UA-XXXXXX|0|
+
+## How to us ?
+Recover all data marked autoload
+```php
+<?php
+// Load the Model if necessary
+$this->loadModel('Options');
+
+// Fetch all data marked autoload
+$options = $this->Options->find('autoload');
+echo $options->site_name; // = 'My Blog'
+echo $options->site_description; // = 'Use CakeSuit/Option for advance settings'
+echo $options->analytics_ua; // = null (this value does not exist)
+```
+
+Recover data by keys
+```php
+<?php
+// Load the Model if necessary
+$this->loadModel('Options');
+$options = $this->Options->find('keys', [
+    'keys' => ['analytics_ua', 'site_description']
+]);
+echo $options->site_name; // = null
+echo $options->site_description; // = 'Use CakeSuit/Option for advance settings'
+echo $options->analytics_ua; // = 'UA-XXXXXX'
+```
+
 
 ## Warning
 !!! this documentation is not finshed !!!
