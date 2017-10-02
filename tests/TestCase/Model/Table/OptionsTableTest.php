@@ -60,7 +60,7 @@ class OptionsTableTest extends TestCase
     {
         $options = $this->Options->find('autoload');
 
-        $this->assertEquals(1, $options->count());
+        $this->assertEquals(2, $options->count());
     }
 
     /**
@@ -69,7 +69,7 @@ class OptionsTableTest extends TestCase
     public function testFindAutoloadInResultSet()
     {
         $options = $this->Options->find('autoload', ['toResult' => false]);
-        $this->assertEquals(1, $options->count());
+        $this->assertEquals(2, $options->count());
 
     }
 
@@ -115,5 +115,11 @@ class OptionsTableTest extends TestCase
         ]);
 
         $this->assertEquals(true, $options->isEmpty());
+    }
+
+    public function testCountOptions()
+    {
+        $options = $this->Options->find('autoload');
+        $this->assertEquals(2, $options->count());
     }
 }
