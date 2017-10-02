@@ -40,7 +40,7 @@ class OptionsControllerTest extends IntegrationTestCase
         $this->assertResponseOk();
 
         $options = $this->Options->find('autoload');
-        $this->assertEquals(1, $options->count());
+        $this->assertEquals(2, $options->count());
 
         $options = $this->Options->find('keys', [
             'keys' => ['site_name', 'site_description']
