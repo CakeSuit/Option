@@ -48,6 +48,12 @@ class OptionsFixture extends TestFixture
             'id' => 'ac106825-8aef-4ca2-9c2a-5b3d63c3e0cb',
             'opt_key' => 'site_description',
             'opt_value' => 'Option for your website.',
+            'opt_autoload' => 1
+        ],
+        [
+            'id' => 'ac106825-8aef-4ca2-9c2a-5b33ed63c0cb',
+            'opt_key' => 'google_analytics',
+            'opt_value' => 'UA-XXXXXX',
             'opt_autoload' => 0
         ],
     ];
