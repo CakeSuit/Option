@@ -135,7 +135,28 @@ echo $options->site_description; // = 'Use CakeSuit/Option for advance settings'
 echo $options->analytics_ua; // = 'UA-XXXXXX'
 ```
 
+Check if empty data
+```php
+<?php
+$this->loadModel('Options');
+$options = $this->Options->find('keys', [
+    'keys' => ['no_existe_value']
+]);
+$options->isEmpty(); // = true
+```
 
-## Warning
-!!! this documentation is not finshed !!!
+Count data
+```php
+<?php
+$this->loadModel('Options');
+$options = $this->Options->find('autoload');
+echo $options->count(); // = 2
+```
+
+## ...
+
+If you encounter any difficulties, do not hesitate to contact me. 
+Thank you.
+
+***C@kesuit***
 
