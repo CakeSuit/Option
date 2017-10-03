@@ -138,9 +138,11 @@ echo $options->analytics_ua; // = 'UA-XXXXXX'
 Check if empty data
 ```php
 <?php
+// Load the Model if necessary
 $this->loadModel('Options');
+
 $options = $this->Options->find('keys', [
-    'keys' => ['no_existe_value']
+    'keys' => ['no_exists_value']
 ]);
 $options->isEmpty(); // = true
 ```
@@ -148,14 +150,16 @@ $options->isEmpty(); // = true
 Count data
 ```php
 <?php
+// Load the Model if necessary
 $this->loadModel('Options');
+
 $options = $this->Options->find('autoload');
 echo $options->count(); // = 2
 ```
 
 ## ...
 
-If you encounter any difficulties, do not hesitate to contact me. 
+If you encounter any difficulties, contact me. 
 Thank you.
 
 ***C@kesuit***
