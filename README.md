@@ -16,12 +16,12 @@ composer require CakeSuit/Option
 
 Load plugin in config/bootstrap.php application
 ```
-bin/cake plugin load -b CakeSuit/Option
+bin/cake plugin load CakeSuit/Option
 ```
 
 If you want to use the built-in routes, load the plugin as follows
 ```
-bin/cake plugin load -br CakeSuit/Option
+bin/cake plugin load -r CakeSuit/Option
 ```
 
 ## Migration
@@ -126,7 +126,7 @@ Recover data by keys
 ```php
 <?php
 // Load the Model if necessary
-$this->loadModel('Options');
+$this->loadModel('CakeSuit/Option.Options');
 $options = $this->Options->find('keys', [
     'keys' => ['analytics_ua', 'site_description']
 ]);
@@ -139,7 +139,7 @@ Check if empty data
 ```php
 <?php
 // Load the Model if necessary
-$this->loadModel('Options');
+$this->loadModel('CakeSuit/Option.Options');
 
 $options = $this->Options->find('keys', [
     'keys' => ['no_exists_value']
@@ -151,7 +151,7 @@ Count data
 ```php
 <?php
 // Load the Model if necessary
-$this->loadModel('Options');
+$this->loadModel('CakeSuit/Option.Options');
 
 $options = $this->Options->find('autoload');
 echo $options->count(); // = 2
