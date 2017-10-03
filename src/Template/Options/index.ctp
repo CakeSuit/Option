@@ -17,6 +17,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('opt_key') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('opt_value') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('opt_autoload') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -26,6 +27,7 @@
             <tr>
                 <td><?= h($option->id) ?></td>
                 <td><?= h($option->opt_key) ?></td>
+                <td><?= h($option->opt_value) ?></td>
                 <td><?= h($option->opt_autoload) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $option->id]) ?>
