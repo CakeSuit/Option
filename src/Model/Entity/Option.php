@@ -2,6 +2,7 @@
 namespace CakeSuit\Option\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\Utility\Text;
 
 /**
  * Option Entity
@@ -27,4 +28,15 @@ class Option extends Entity
         'opt_value' => true,
         'opt_autoload' => true
     ];
+
+    /**
+     * Format key to slugify type
+     * @param $optKey
+     * @return string
+     */
+    protected function _setOptKey($optKey)
+    {
+        $optKey = strip_tags($optKey);
+        return Text::slug($optKey, '_');
+    }
 }
