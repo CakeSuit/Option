@@ -1,8 +1,14 @@
 {
-    "name": "CakeSuit/Option",
-    "description": "CakeSuit/Option plugin for CakePHP",
+    "name": "cakesuit/option",
+    "description": "Define/fetching quickly preference for your application",
     "type": "cakephp-plugin",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Frédéric KOLLER",
+            "email": "labelsuisse@gmail.com"
+        }
+    ],
     "require": {
         "cakephp/cakephp": "^3.4"
     },
