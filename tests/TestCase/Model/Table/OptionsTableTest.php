@@ -122,4 +122,20 @@ class OptionsTableTest extends TestCase
         $options = $this->Options->find('autoload');
         $this->assertEquals(2, $options->count());
     }
+
+    public function testFormatOptKey()
+    {
+        $data = [
+            'opt_key' => 'the test',
+            'opt_value' => 'is passed'
+        ];
+
+        $opt = $this->Options->newEntity($data);
+        $this->Options->save($opt);
+
+        $option = $this->Options->find('keys', [
+            'keys' => ['the_test']
+        ]);
+        $this->assertEquals('is passed', $option->the_test);
+    }
 }
