@@ -1,6 +1,6 @@
 <?php
 
-namespace CakeSuit\Option\Controller;
+namespace Cakesuit\Option\Controller;
 
 use App\Controller\AppController as BaseController;
 

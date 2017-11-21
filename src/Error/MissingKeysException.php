@@ -5,7 +5,7 @@
  * Time: 22:05
  */
 
-namespace CakeSuit\Option\Error;
+namespace Cakesuit\Option\Error;
 
 use Cake\Core\Exception\Exception;
 

@@ -1,13 +1,13 @@
 <?php
-namespace Biscuit\Option\Test\TestCase\Model\Table;
+namespace Cakesuit\Option\Test\TestCase\Model\Table;
 
-use CakeSuit\Option\Error\MissingKeysException;
-use CakeSuit\Option\Model\Table\OptionsTable;
+use Cakesuit\Option\Error\MissingKeysException;
+use Cakesuit\Option\Model\Table\OptionsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * CakeSuit\Option\Model\Table\OptionsTable Test Case
+ * Cakesuit\Option\Model\Table\OptionsTable Test Case
  */
 class OptionsTableTest extends TestCase
 {
@@ -25,7 +25,7 @@ class OptionsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.CakeSuit/option.options'
+        'plugin.Cakesuit/option.options'
     ];
 
     /**

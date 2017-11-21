@@ -1,13 +1,13 @@
 <?php
-namespace CakeSuit\Option\Test\TestCase\Controller;
+namespace Cakesuit\Option\Test\TestCase\Controller;
 
-use CakeSuit\Option\Controller\OptionsController;
-use CakeSuit\Option\Model\Table\OptionsTable;
+use Cakesuit\Option\Controller\OptionsController;
+use Cakesuit\Option\Model\Table\OptionsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\IntegrationTestCase;
 
 /**
- * CakeSuit\Option\Controller\OptionsController Test Case
+ * Cakesuit\Option\Controller\OptionsController Test Case
  */
 class OptionsControllerTest extends IntegrationTestCase
 {
@@ -18,7 +18,7 @@ class OptionsControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.CakeSuit/option.options'
+        'plugin.Cakesuit/option.options'
     ];
 
     public function setUp()
@@ -81,7 +81,7 @@ class OptionsControllerTest extends IntegrationTestCase
             'opt_value' => 'My new web site',
             'opt_autoload' => 1
         ]);
-        $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
+        $this->assertRedirect(['plugin' => 'Cakesuit/Option', 'controller' => 'Options', 'action' => 'index']);
     }
 
     /**
@@ -99,19 +99,19 @@ class OptionsControllerTest extends IntegrationTestCase
             'opt_value' => 'My new web site'
         ]);
 
-        $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
+        $this->assertRedirect(['plugin' => 'Cakesuit/Option', 'controller' => 'Options', 'action' => 'index']);
 
         $this->put('cakesuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
             'opt_autoload' => 1
         ]);
 
-        $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
+        $this->assertRedirect(['plugin' => 'Cakesuit/Option', 'controller' => 'Options', 'action' => 'index']);
 
         $this->post('cakesuit/options/edit/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7', [
             'opt_autoload' => 1
         ]);
 
-        $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
+        $this->assertRedirect(['plugin' => 'Cakesuit/Option', 'controller' => 'Options', 'action' => 'index']);
     }
 
     /**
@@ -122,6 +122,6 @@ class OptionsControllerTest extends IntegrationTestCase
     public function testDelete()
     {
         $this->delete('cakesuit/options/delete/ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7');
-        $this->assertRedirect(['plugin' => 'CakeSuit/Option', 'controller' => 'Options', 'action' => 'index']);
+        $this->assertRedirect(['plugin' => 'Cakesuit/Option', 'controller' => 'Options', 'action' => 'index']);
     }
 }

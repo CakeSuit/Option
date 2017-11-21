@@ -1,9 +1,9 @@
 <?php
 
-namespace CakeSuit\Option\Model\Table;
+namespace Cakesuit\Option\Model\Table;
 
-use CakeSuit\Option\Error\MissingKeysException;
-use CakeSuit\Option\ORM\Result;
+use Cakesuit\Option\Error\MissingKeysException;
+use Cakesuit\Option\ORM\Result;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
@@ -12,13 +12,13 @@ use Cake\Validation\Validator;
 /**
  * Options Model
  *
- * @method \CakeSuit\Option\Model\Entity\Option get($primaryKey, $options = [])
- * @method \CakeSuit\Option\Model\Entity\Option newEntity($data = null, array $options = [])
- * @method \CakeSuit\Option\Model\Entity\Option[] newEntities(array $data, array $options = [])
- * @method \CakeSuit\Option\Model\Entity\Option|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \CakeSuit\Option\Model\Entity\Option patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \CakeSuit\Option\Model\Entity\Option[] patchEntities($entities, array $data, array $options = [])
- * @method \CakeSuit\Option\Model\Entity\Option findOrCreate($search, callable $callback = null, $options = [])
+ * @method \Cakesuit\Option\Model\Entity\Option get($primaryKey, $options = [])
+ * @method \Cakesuit\Option\Model\Entity\Option newEntity($data = null, array $options = [])
+ * @method \Cakesuit\Option\Model\Entity\Option[] newEntities(array $data, array $options = [])
+ * @method \Cakesuit\Option\Model\Entity\Option|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \Cakesuit\Option\Model\Entity\Option patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \Cakesuit\Option\Model\Entity\Option[] patchEntities($entities, array $data, array $options = [])
+ * @method \Cakesuit\Option\Model\Entity\Option findOrCreate($search, callable $callback = null, $options = [])
  */
 class OptionsTable extends Table
 {

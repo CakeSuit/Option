@@ -1,4 +1,4 @@
-# CakeSuit/Option plugin for CakePHP
+# Cakesuit/Option plugin for CakePHP
 ## What is it ?
 This plugin allows you to simply define options for your application with the key/value pair.
 ## Requirements
@@ -11,30 +11,30 @@ You can install this plugin into your CakePHP application using [composer](http:
 The recommended way to install composer packages is:
 
 ```
-composer require CakeSuit/Option
+composer require cakesuit/option
 ```
 
 Load plugin in config/bootstrap.php application
 ```
-bin/cake plugin load CakeSuit/Option
+bin/cake plugin load Cakesuit/Option
 ```
 
 If you want to use the built-in routes, load the plugin as follows
 ```
-bin/cake plugin load -r CakeSuit/Option
+bin/cake plugin load -r Cakesuit/Option
 ```
 
 ## Migration
 Now that the plugin is installed and loaded, you have to migrate the schema for the database
 ```
-bin/cake migrations migrate -p CakeSuit/Option
+bin/cake migrations migrate -p Cakesuit/Option
 ```
 
 ## Default Routes
 ```php
 <?php
 Router::plugin(
-    'CakeSuit/Option',
+    'Cakesuit/Option',
     ['path' => '/cakesuit'],
     function (RouteBuilder $routes) {
         
@@ -126,7 +126,7 @@ Recover data by keys
 ```php
 <?php
 // Load the Model if necessary
-$this->loadModel('CakeSuit/Option.Options');
+$this->loadModel('Cakesuit/Option.Options');
 $options = $this->Options->find('keys', [
     'keys' => ['analytics_ua', 'site_description']
 ]);
@@ -139,7 +139,7 @@ Check if empty data
 ```php
 <?php
 // Load the Model if necessary
-$this->loadModel('CakeSuit/Option.Options');
+$this->loadModel('Cakesuit/Option.Options');
 
 $options = $this->Options->find('keys', [
     'keys' => ['no_exists_value']
@@ -151,7 +151,7 @@ Count data
 ```php
 <?php
 // Load the Model if necessary
-$this->loadModel('CakeSuit/Option.Options');
+$this->loadModel('Cakesuit/Option.Options');
 
 $options = $this->Options->find('autoload');
 echo $options->count(); // = 2

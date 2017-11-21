@@ -1,11 +1,11 @@
 <?php
 /**
- * Created by CakeSuit.
+ * Created by Cakesuit.
  * Date: 16/09/2017
  * Time: 22:42
  */
 
-namespace CakeSuit\Option\ORM;
+namespace Cakesuit\Option\ORM;
 
 use Cake\Utility\Inflector;
 use InvalidArgumentException;

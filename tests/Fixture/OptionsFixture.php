@@ -1,5 +1,5 @@
 <?php
-namespace CakeSuit\Option\Test\Fixture;
+namespace Cakesuit\Option\Test\Fixture;
 
 use Cake\TestSuite\Fixture\TestFixture;
 
@@ -41,7 +41,7 @@ class OptionsFixture extends TestFixture
         [
             'id' => 'ac106825-8aef-4ca2-9c2a-5b3d63c3e0c7',
             'opt_key' => 'site_name',
-            'opt_value' => 'CakeSuit/Option for CakePHP.',
+            'opt_value' => 'Cakesuit/Option for CakePHP.',
             'opt_autoload' => 1
         ],
         [

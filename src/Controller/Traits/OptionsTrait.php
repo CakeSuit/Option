@@ -1,11 +1,11 @@
 <?php
 /**
- * Created by CakeSuit.
+ * Created by Cakesuit.
  * Date: 22/09/2017
  * Time: 21:31
  */
 
-namespace CakeSuit\Option\Controller\Traits;
+namespace Cakesuit\Option\Controller\Traits;
 
 
 trait OptionsTrait
@@ -18,7 +18,6 @@ trait OptionsTrait
     public function index()
     {
         $options = $this->paginate($this->Options);
-
         $this->set(compact('options'));
         $this->set('_serialize', ['options']);
     }

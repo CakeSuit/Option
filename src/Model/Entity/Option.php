@@ -1,5 +1,5 @@
 <?php
-namespace CakeSuit\Option\Model\Entity;
+namespace Cakesuit\Option\Model\Entity;
 
 use Cake\ORM\Entity;
 use Cake\Utility\Text;
